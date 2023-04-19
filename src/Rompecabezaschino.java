@@ -41,7 +41,7 @@ public class Rompecabezaschino extends JFrame {
 	 */
 	public Rompecabezaschino() {
 
-		List<String> values = Arrays.asList("1", "2", "3", "4","5","6","7","8","9","10","11","12","13","14","15");
+		List<String> values = Arrays.asList("1", "2", "3", "4","5","6","7","8","9","10","11","12","13","14","15","");
 		Collections.shuffle(values);
 		System.out.println(values);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -68,13 +68,16 @@ public class Rompecabezaschino extends JFrame {
 			final int indice = i;
 			JButton botones = new JButton();
 			botones.setBackground(new Color(255, 128, 0));
-
-		//	botones.add(list);
+			if (i < 16) {
+				botones.setText(values.get(i));
+			} else {
+				// The last button is the empty one
+				botones.setText("");
+			}
 			botones.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					jugar(indice);
 				}
-
 			});
 			panel.add(botones);
 			fichas[i] = botones;
@@ -114,6 +117,7 @@ public class Rompecabezaschino extends JFrame {
 	}
 
 	private void jugar(int index) {
+
 
 	}
 	private void recombinar() {
