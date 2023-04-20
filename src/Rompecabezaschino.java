@@ -68,15 +68,13 @@ public class Rompecabezaschino extends JFrame {
 			final int indice = i;
 			JButton botones = new JButton();
 			botones.setBackground(new Color(255, 128, 0));
-			if (i < 15) {
-				botones.setText(values.get(i));
-			} else {
-				botones.setText("");
-			}
+
+		//	botones.add(list);
 			botones.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					jugar(indice);
 				}
+
 			});
 			panel.add(botones);
 			fichas[i] = botones;
@@ -105,8 +103,6 @@ public class Rompecabezaschino extends JFrame {
 		JLabel lblNewLabel_2 = new JLabel("New label");
 		lblNewLabel_2.setForeground(new Color(255, 128, 128));
 		panel_3.add(lblNewLabel_2);
-		JButton revolver = new JButton("Revolver");
-		panel_3.add(revolver);
 		
 		JPanel panel_4 = new JPanel();
 		panel_4.setBackground(new Color(255, 128, 128));
@@ -115,7 +111,6 @@ public class Rompecabezaschino extends JFrame {
 		JLabel lblNewLabel_3 = new JLabel("New label");
 		lblNewLabel_3.setForeground(new Color(255, 128, 128));
 		panel_4.add(lblNewLabel_3);
-
 	}
 
 	private void jugar(int index) {
