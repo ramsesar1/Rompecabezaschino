@@ -115,6 +115,7 @@ public class Rompecabezaschino extends JFrame {
 
 	private void jugar(int index) {
 
+
 	}
 	private void recombinar() {
 		for (int i = 0; i < 16; i++) {
