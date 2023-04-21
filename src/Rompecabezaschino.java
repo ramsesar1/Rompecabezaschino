@@ -134,7 +134,23 @@ public class Rompecabezaschino extends JFrame {
 	}
 
 	private void jugar(int index) {
+		if (!fichas[index].getText().equals("")) {
+			int tablero2 = -1;
+			for (int i = 0; i < fichas.length; i++) {
+				if (fichas[i].getText().equals("")) {
+					tablero2 = i;
+					break;
+				}
+			}
+			if (tablero2 == index - 1 || tablero2 == index + 1 || tablero2 == index - 4 || tablero2 == index + 4) {
 
+				//intercambiar lugar
+
+ 				String temp = fichas[index].getText();
+				fichas[index].setText("");
+				fichas[tablero2].setText(temp);
+			}
+		}
 	}
 
 
