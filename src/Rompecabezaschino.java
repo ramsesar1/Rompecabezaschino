@@ -1,7 +1,6 @@
 import java.awt.*;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,8 +8,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import javax.swing.JButton;
-import javax.swing.JLabel;
 
 public class Rompecabezaschino extends JFrame {
 
@@ -42,8 +39,10 @@ public class Rompecabezaschino extends JFrame {
 	 */
 	public Rompecabezaschino() {
 
+
+
 		List<String> values = Arrays.asList("1", "2", "3", "4","5","6","7","8","9","10","11","12","13","14","15", "");
-		Collections.shuffle(values);
+	//	Collections.shuffle(values);
 		System.out.println(values);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 631, 541);
@@ -60,7 +59,7 @@ public class Rompecabezaschino extends JFrame {
 
 
 
-		//Botones
+		//Botones y aspecto
 
 
 		fichas = new JButton[16];
@@ -114,10 +113,18 @@ public class Rompecabezaschino extends JFrame {
 		});
 		panel_3.add(revolver);
 
-
-
-
-
+		JButton botonrevisado = new JButton("Revisar rompecabezas");
+		botonrevisado.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (revisar()) {
+					JOptionPane.showMessageDialog(null, "ya sabemos que ganaste");
+				} else {
+					JOptionPane.showMessageDialog(null, "aun no ganas", "Error", JOptionPane.ERROR_MESSAGE);
+				}
+			}
+		});
+		panel_3.add(botonrevisado);
 
 		
 		JLabel lblNewLabel_2 = new JLabel("New label");
@@ -133,8 +140,23 @@ public class Rompecabezaschino extends JFrame {
 		panel_4.add(lblNewLabel_3);
 	}
 
-	private void jugar(int index) {
-		if (!fichas[index].getText().equals("")) {
+
+
+
+
+
+
+	// Logica del juego
+
+
+
+
+
+
+
+	//mueve las fichas
+	private void jugar(int juego) {
+		if (!fichas[juego].getText().equals("")) {
 			int tablero2 = -1;
 			for (int i = 0; i < fichas.length; i++) {
 				if (fichas[i].getText().equals("")) {
@@ -142,18 +164,54 @@ public class Rompecabezaschino extends JFrame {
 					break;
 				}
 			}
-			if (tablero2 == index - 1 || tablero2 == index + 1 || tablero2 == index - 4 || tablero2 == index + 4) {
+			if (tablero2 == juego - 1 || tablero2 == juego + 1 || tablero2 == juego - 4 || tablero2 == juego + 4) {
 
 				//intercambiar lugar
-
- 				String temp = fichas[index].getText();
-				fichas[index].setText("");
+				String temp = fichas[juego].getText();
+				fichas[juego].setText("");
 				fichas[tablero2].setText(temp);
+
+				//llama al metodo que muestra el mensaje si el usuario completo el rompecabezas
+				Revisarymostrar();
+
+
 			}
 		}
 	}
 
 
+	//revisa si esta completado, me dio flojera tener que hacer el rompecabezas cada vez para poder validar
+	private boolean revisar() {
+		for (int i = 0; i < fichas.length; i++) {
+			String valores = (i == fichas.length - 1) ? "" : Integer.toString(i + 1);
+			if (!fichas[i].getText().equals(valores)) {
+				return false;
+
+			}
+		}
+		return true;
+	}
+
+
+	//si esta completado, muestra el mensaje en automatico al usuario
+	private void Revisarymostrar() {
+		if (revisar()) {
+			JOptionPane.showMessageDialog(null, "una plauso, congratulations, you ganaste", "felicitations", JOptionPane.PLAIN_MESSAGE);
+		}
+	}
+
+	//Revisa si el usuario gana
+/*
+	private boolean revisar() {
+		for (int i = 0; i < fichas.length; i++) {
+			if (!fichas[i].getText().equals("" + (i+1))) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+ */
 	//La funcion recombinar ya revuelve los botones
 
 	private void recombinar() {
