@@ -84,7 +84,7 @@ public class Rompecabezaschino extends JFrame {
 		for (int i = 0; i < 16; i++) {
 			final int indice = i;
 			JButton botones = new JButton();
-			botones.setBackground(new Color(255, 128, 0));
+			botones.setBackground(new Color(227, 168, 106));
 			if (i < 16) {
 				botones.setText(values.get(i));
 			} else {
@@ -101,23 +101,23 @@ public class Rompecabezaschino extends JFrame {
 
 
 		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(new Color(255, 128, 128));
+		panel_1.setBackground(new Color(243, 152, 93));
 		contentPane.add(panel_1, BorderLayout.WEST);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setForeground(new Color(255, 128, 128));
+		lblNewLabel.setForeground(new Color(243, 152, 93));
 		panel_1.add(lblNewLabel);
 		
 		JPanel panel_2 = new JPanel();
-		panel_2.setBackground(new Color(255, 128, 128));
+		panel_2.setBackground(new Color(243, 152, 93));
 		contentPane.add(panel_2, BorderLayout.NORTH);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setForeground(new Color(255, 128, 128));
+		lblNewLabel_1.setForeground(new Color(243, 152, 93));
 		panel_2.add(lblNewLabel_1);
 		
 		JPanel panel_3 = new JPanel();
-		panel_3.setBackground(new Color(255, 128, 128));
+		panel_3.setBackground(new Color(243, 152, 93));
 		contentPane.add(panel_3, BorderLayout.SOUTH);
 
 
@@ -145,15 +145,15 @@ public class Rompecabezaschino extends JFrame {
 
 		
 		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setForeground(new Color(255, 128, 128));
+		lblNewLabel_2.setForeground(new Color(243, 152, 93));
 		panel_3.add(lblNewLabel_2);
 		
 		JPanel panel_4 = new JPanel();
-		panel_4.setBackground(new Color(255, 128, 128));
+		panel_4.setBackground(new Color(243, 152, 93));
 		contentPane.add(panel_4, BorderLayout.EAST);
 		
 		JLabel lblNewLabel_3 = new JLabel("New label");
-		lblNewLabel_3.setForeground(new Color(255, 128, 128));
+		lblNewLabel_3.setForeground(new Color(243, 152, 93));
 		panel_4.add(lblNewLabel_3);
 	}
 

@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89b99c1d-11b4-40f8-86e8-f69b3cec3a6a" name="Changes" comment="Se quita que el juego inicie de manera fija y sea ahora alineacion aleatoria">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="89b99c1d-11b4-40f8-86e8-f69b3cec3a6a" name="Changes" comment="Se añade un splash de carga como estetico, con 2 segundos de delay, para evitar que sea instantaneo">
       <change beforePath="$PROJECT_DIR$/src/Rompecabezaschino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rompecabezaschino.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682047740444</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Se añade un splash de carga como estetico, con 2 segundos de delay, para evitar que sea instantaneo">
+      <created>1682049084785</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682049084785</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +132,7 @@
     <MESSAGE value="Se elimino un metodo anterior utilizado para revisar si se completo el rompecabezas, su version funcional se dejo" />
     <MESSAGE value="Se añade un mensaje de confirmacion si se selecciona el recombinar fichas, en caso de que el usuario quiera revolverlas otra vez o le pico por error" />
     <MESSAGE value="Se quita que el juego inicie de manera fija y sea ahora alineacion aleatoria" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se quita que el juego inicie de manera fija y sea ahora alineacion aleatoria" />
+    <MESSAGE value="Se añade un splash de carga como estetico, con 2 segundos de delay, para evitar que sea instantaneo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se añade un splash de carga como estetico, con 2 segundos de delay, para evitar que sea instantaneo" />
   </component>
 </project>
