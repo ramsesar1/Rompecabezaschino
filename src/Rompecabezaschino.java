@@ -5,6 +5,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -68,17 +69,20 @@ public class Rompecabezaschino extends JFrame {
 			final int indice = i;
 			JButton botones = new JButton();
 			botones.setBackground(new Color(255, 128, 0));
-
-		//	botones.add(list);
+			if (i < 15) {
+				botones.setText(values.get(i));
+			} else {
+				botones.setText("");
+			}
 			botones.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					jugar(indice);
 				}
-
 			});
 			panel.add(botones);
 			fichas[i] = botones;
 		}
+
 
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(new Color(255, 128, 128));
@@ -99,6 +103,22 @@ public class Rompecabezaschino extends JFrame {
 		JPanel panel_3 = new JPanel();
 		panel_3.setBackground(new Color(255, 128, 128));
 		contentPane.add(panel_3, BorderLayout.SOUTH);
+
+
+
+		JButton revolver = new JButton("Recombinar");
+		revolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				recombinar();
+			}
+		});
+		panel_3.add(revolver);
+
+
+
+
+
+
 		
 		JLabel lblNewLabel_2 = new JLabel("New label");
 		lblNewLabel_2.setForeground(new Color(255, 128, 128));
@@ -115,13 +135,21 @@ public class Rompecabezaschino extends JFrame {
 
 	private void jugar(int index) {
 
-
 	}
+
+
+	//La funcion recombinar ya revuelve los botones
+
 	private void recombinar() {
-		for (int i = 0; i < 16; i++) {
-
+		List<Integer> numeros = new ArrayList<Integer>();
+		for (int i = 1; i <= 15; i++) {
+			numeros.add(i);
 		}
+		Collections.shuffle(numeros);
+		for (int i = 0; i < 15; i++) {
+			fichas[i].setText(numeros.get(i).toString());
+		}
+		fichas[15].setText("");
 	}
-
 
 }
