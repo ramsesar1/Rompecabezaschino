@@ -200,18 +200,7 @@ public class Rompecabezaschino extends JFrame {
 		}
 	}
 
-	//Revisa si el usuario gana
-/*
-	private boolean revisar() {
-		for (int i = 0; i < fichas.length; i++) {
-			if (!fichas[i].getText().equals("" + (i+1))) {
-				return false;
-			}
-		}
-		return true;
-	}
 
- */
 	//La funcion recombinar ya revuelve los botones
 
 	private void recombinar() {
