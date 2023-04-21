@@ -42,7 +42,7 @@ public class Rompecabezaschino extends JFrame {
 	 */
 	public Rompecabezaschino() {
 
-		List<String> values = Arrays.asList("1", "2", "3", "4","5","6","7","8","9","10","11","12","13","14","15");
+		List<String> values = Arrays.asList("1", "2", "3", "4","5","6","7","8","9","10","11","12","13","14","15", "");
 		Collections.shuffle(values);
 		System.out.println(values);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -69,7 +69,7 @@ public class Rompecabezaschino extends JFrame {
 			final int indice = i;
 			JButton botones = new JButton();
 			botones.setBackground(new Color(255, 128, 0));
-			if (i < 15) {
+			if (i < 16) {
 				botones.setText(values.get(i));
 			} else {
 				botones.setText("");
@@ -141,15 +141,10 @@ public class Rompecabezaschino extends JFrame {
 	//La funcion recombinar ya revuelve los botones
 
 	private void recombinar() {
-		List<Integer> numeros = new ArrayList<Integer>();
-		for (int i = 1; i <= 15; i++) {
-			numeros.add(i);
+		List<String> values = Arrays.asList("1", "2", "3", "4","5","6","7","8","9","10","11","12","13","14","15","");
+		Collections.shuffle(values);
+		for (int i = 0; i < 16; i++) {
+			fichas[i].setText(values.get(i));
 		}
-		Collections.shuffle(numeros);
-		for (int i = 0; i < 15; i++) {
-			fichas[i].setText(numeros.get(i).toString());
-		}
-		fichas[15].setText("");
 	}
-
 }
