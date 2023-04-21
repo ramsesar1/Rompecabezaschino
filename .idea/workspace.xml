@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89b99c1d-11b4-40f8-86e8-f69b3cec3a6a" name="Changes" comment="Se elimino un metodo anterior utilizado para revisar si se completo el rompecabezas, su version funcional se dejo">
+    <list default="true" id="89b99c1d-11b4-40f8-86e8-f69b3cec3a6a" name="Changes" comment="Se quita que el juego inicie de manera fija y sea ahora alineacion aleatoria">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rompecabezaschino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rompecabezaschino.java" afterDir="false" />
     </list>
@@ -89,7 +89,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682046048785</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Se añade un mensaje de confirmacion si se selecciona el recombinar fichas, en caso de que el usuario quiera revolverlas otra vez o le pico por error">
+      <created>1682047662210</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682047662210</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Se quita que el juego inicie de manera fija y sea ahora alineacion aleatoria">
+      <created>1682047740444</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682047740444</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,6 +124,8 @@
     <MESSAGE value="Los JButton ya cambian de lugar si estan junto al que no tiene numero solamente" />
     <MESSAGE value="Tuve que extenderme con este push ya que sino seria solo meter codigo que no hace nada, la logica base del juego funciona, agrege un JBUtton para validar sin necesidad de completar el rompecabezas cada vez, muestra si el usuario completo el puzzle o aun le falta" />
     <MESSAGE value="Se elimino un metodo anterior utilizado para revisar si se completo el rompecabezas, su version funcional se dejo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se elimino un metodo anterior utilizado para revisar si se completo el rompecabezas, su version funcional se dejo" />
+    <MESSAGE value="Se añade un mensaje de confirmacion si se selecciona el recombinar fichas, en caso de que el usuario quiera revolverlas otra vez o le pico por error" />
+    <MESSAGE value="Se quita que el juego inicie de manera fija y sea ahora alineacion aleatoria" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se quita que el juego inicie de manera fija y sea ahora alineacion aleatoria" />
   </component>
 </project>

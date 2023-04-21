@@ -22,10 +22,27 @@ public class Rompecabezaschino extends JFrame {
 	 */
 	public static void main(String[] args) {
 
+		JFrame cargando = new JFrame();
+		JLabel cargandotexto = new JLabel("Carga en progreso...");
+		cargandotexto.setHorizontalAlignment(SwingConstants.CENTER);
+		cargando.getContentPane().add(cargandotexto);
+		cargando.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		cargando.setSize(200, 100);
+		cargando.setLocationRelativeTo(null);
+		cargando.setUndecorated(true);
+		cargando.setVisible(true);
+
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					Rompecabezaschino frame = new Rompecabezaschino();
+					cargando.dispose();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
