@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89b99c1d-11b4-40f8-86e8-f69b3cec3a6a" name="Changes" comment="Los JButton ya cambian de lugar si estan junto al que no tiene numero solamente">
+    <list default="true" id="89b99c1d-11b4-40f8-86e8-f69b3cec3a6a" name="Changes" comment="Se elimino un metodo anterior utilizado para revisar si se completo el rompecabezas, su version funcional se dejo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rompecabezaschino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rompecabezaschino.java" afterDir="false" />
     </list>
@@ -75,7 +75,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682039468648</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Tuve que extenderme con este push ya que sino seria solo meter codigo que no hace nada, la logica base del juego funciona, agrege un JBUtton para validar sin necesidad de completar el rompecabezas cada vez, muestra si el usuario completo el puzzle o aun le falta">
+      <created>1682046006019</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682046006019</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Se elimino un metodo anterior utilizado para revisar si se completo el rompecabezas, su version funcional se dejo">
+      <created>1682046048785</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682046048785</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -94,6 +108,8 @@
     <MESSAGE value="el JButton revolver llama al metodo recombinar y revuelve los numeros dentro del rompecabezas" />
     <MESSAGE value="se cambio la funcion recombinar, generaba un bug donde mandaba error o aparecian 2 espacios vacios o se repetian numeros." />
     <MESSAGE value="Los JButton ya cambian de lugar si estan junto al que no tiene numero solamente" />
-    <option name="LAST_COMMIT_MESSAGE" value="Los JButton ya cambian de lugar si estan junto al que no tiene numero solamente" />
+    <MESSAGE value="Tuve que extenderme con este push ya que sino seria solo meter codigo que no hace nada, la logica base del juego funciona, agrege un JBUtton para validar sin necesidad de completar el rompecabezas cada vez, muestra si el usuario completo el puzzle o aun le falta" />
+    <MESSAGE value="Se elimino un metodo anterior utilizado para revisar si se completo el rompecabezas, su version funcional se dejo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se elimino un metodo anterior utilizado para revisar si se completo el rompecabezas, su version funcional se dejo" />
   </component>
 </project>

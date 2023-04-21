@@ -197,6 +197,7 @@ public class Rompecabezaschino extends JFrame {
 	private void Revisarymostrar() {
 		if (revisar()) {
 			JOptionPane.showMessageDialog(null, "una plauso, congratulations, you ganaste", "felicitations", JOptionPane.PLAIN_MESSAGE);
+			System.out.println("completado");
 		}
 	}
 
@@ -206,8 +207,15 @@ public class Rompecabezaschino extends JFrame {
 	private void recombinar() {
 		List<String> values = Arrays.asList("1", "2", "3", "4","5","6","7","8","9","10","11","12","13","14","15","");
 		Collections.shuffle(values);
-		for (int i = 0; i < 16; i++) {
-			fichas[i].setText(values.get(i));
+		int decision = JOptionPane.showConfirmDialog(this, "¿Revolver rompecabezas?", "no hay vuelta atras", JOptionPane.OK_CANCEL_OPTION);
+
+		if (decision == JOptionPane.OK_OPTION) {
+			for (int i = 0; i < 16; i++) {
+				fichas[i].setText(values.get(i));
+			}
 		}
 	}
+
+
+
 }
