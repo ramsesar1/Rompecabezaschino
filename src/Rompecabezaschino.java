@@ -42,7 +42,7 @@ public class Rompecabezaschino extends JFrame {
 
 
 		List<String> values = Arrays.asList("1", "2", "3", "4","5","6","7","8","9","10","11","12","13","14","15", "");
-	//	Collections.shuffle(values);
+		Collections.shuffle(values);
 		System.out.println(values);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 631, 541);
